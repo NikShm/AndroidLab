@@ -1,30 +1,40 @@
-AndroidTrivia - starter code
-============================
+TrackMySleepQuality - Solution Code for 6.2 Coroutines codelab
+==============================================================
 
-Starter code for Android Kotlin Fundamentals codelab 3.1: Create and add a
-fragment.
+Solution code for Android Kotlin Fundamentals Codelab 6.2 Coroutines
 
 Introduction
 ------------
 
-The AndroidTrivia app asks the user trivia questions about Android development.
-It makes use of the navigation component within Jetpack to move the user between
-screens. Each screen is implemented as a fragment.
+TrackMySleepQuality is an app for recording sleep data for each night. 
+You can record a start and stop time, assign a quality rating, and clear the database. 
 
-The app navigates using buttons, the app bar, and a navigation drawer. Because
-students haven't yet learned about saving data or the Android lifecycle, the app
-tries to eliminate bugs caused by configuration changes.
+This app:
 
-Prerequisites
--------------
+* Extends the TrackMySleepQuality app to collect, store, and display data in and from the database. 
+* Uses coroutines to run long-running database operations in the background. 
+* Uses LiveData to trigger navigation and showing of a snackbar. 
+* Uses LiveData to enable and disable buttons.
+
+
+Pre-requisites
+--------------
 
 You need to know:
-- The fundamentals of Kotlin.
-- How to create basic Android apps in Kotlin.
-- How to open, build, and run apps with Android Studio.
-- How to work with layouts.
 
-Getting started
+* Building a basic user interface (UI) for an Android app, 
+  using an activity, fragments, and views.
+* Navigating between fragments and using Safe Args (a Gradle plugin) 
+  to pass data between fragments.
+* View models, view-model factories, and LiveData and its observers. 
+  These Architecture Components topics are covered in an earlier codelab in this course.
+* A basic understanding of SQL databases and the SQLite language.
+* How to create a Room database, create a DAO, and define entities, 
+  from the previous Room codelab[LINK]. 
+* It is helpful if you are familiar with threading and multiprocessing concepts.
+
+
+Getting Started
 ---------------
 
 1. Download and run the app.
