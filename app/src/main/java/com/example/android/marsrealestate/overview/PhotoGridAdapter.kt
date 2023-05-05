@@ -15,4 +15,6 @@
  *
  */
 
-include ':app'
+package com.example.android.marsrealestate.overview
+
+
