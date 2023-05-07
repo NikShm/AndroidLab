@@ -1,37 +1,31 @@
-TrackMySleepQuality - Solution Code for 6.2 Coroutines codelab
-==============================================================
+TrackMySleepQuality with RecyclerView - Solution Code for 7.2
+============================================================
 
-Solution code for Android Kotlin Fundamentals Codelab 6.2 Coroutines
+Solution code for Android Kotlin Fundamentals Codelab 7.2 DiffUtil and data binding with RecyclerView
 
 Introduction
 ------------
 
-TrackMySleepQuality is an app for recording sleep data for each night. 
-You can record a start and stop time, assign a quality rating, and clear the database. 
+TrackMySleepQuality is an app for recording sleep data for each night.
+You can record a start and stop time, assign a quality rating, and clear the database.
 
-This app:
-
-* Extends the TrackMySleepQuality app to collect, store, and display data in and from the database. 
-* Uses coroutines to run long-running database operations in the background. 
-* Uses LiveData to trigger navigation and showing of a snackbar. 
-* Uses LiveData to enable and disable buttons.
+Learn techniques that make RecyclerView more efficient for large lists.
+You will also learn techniques to make your code easier to maintain and extend for complex
+lists and grids in your Android Kotlin apps.
 
 
 Pre-requisites
 --------------
 
-You need to know:
+You should be familiar with:
 
-* Building a basic user interface (UI) for an Android app, 
-  using an activity, fragments, and views.
-* Navigating between fragments and using Safe Args (a Gradle plugin) 
-  to pass data between fragments.
-* View models, view-model factories, and LiveData and its observers. 
-  These Architecture Components topics are covered in an earlier codelab in this course.
-* A basic understanding of SQL databases and the SQLite language.
-* How to create a Room database, create a DAO, and define entities, 
-  from the previous Room codelab[LINK]. 
-* It is helpful if you are familiar with threading and multiprocessing concepts.
+* Building a basic user interface (UI) using an activity, fragments, and views.
+* Navigating between fragments, and using safeArgs to pass data between fragments.
+* Using view models, view model factories, transformations, and LiveData and their observers.
+* Creating a Room database, creating a DAO, and defining entities.
+* Using coroutines for database tasks and other long-running tasks.
+* How to implement a basic RecyclerView with an Adapter, ViewHolder, and item layout.
+
 
 
 Getting Started
@@ -58,3 +52,4 @@ distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
 WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  See the
 License for the specific language governing permissions and limitations under
 the License.
+
