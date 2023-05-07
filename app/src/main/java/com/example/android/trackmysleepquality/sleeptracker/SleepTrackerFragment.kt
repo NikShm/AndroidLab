@@ -70,8 +70,12 @@ class SleepTrackerFragment : Fragment() {
         // give the binding object a reference to it.
         binding.sleepTrackerViewModel = sleepTrackerViewModel
 
-        val adapter = SleepNightAdapter()
+        val adapter = SleepNightAdapter(SleepNightListener { nightId ->
+            //Toast.makeText(context, "${nightId}", Toast.LENGTH_LONG).show()
+            sleepTrackerViewModel.onSleepNightClicked(nightId)
+        })
         binding.sleepList.adapter = adapter
+
 
         sleepTrackerViewModel.nights.observe(viewLifecycleOwner, Observer {
             it?.let {
@@ -117,9 +121,18 @@ class SleepTrackerFragment : Fragment() {
             }
         })
 
-//        val manager = GridLayoutManager(activity, 3, GridLayoutManager.VERTICAL, false)
-//        val manager = GridLayoutManager(activity, 10)
-        val manager = GridLayoutManager(activity, 5, GridLayoutManager.HORIZONTAL, false)
+        // Add an Observer on the state variable for Navigating when and item is clicked.
+        sleepTrackerViewModel.navigateToSleepDetail.observe(this, Observer { night ->
+            night?.let {
+
+                this.findNavController().navigate(
+                        SleepTrackerFragmentDirections
+                                .actionSleepTrackerFragmentToSleepDetailFragment(night))
+                sleepTrackerViewModel.onSleepDetailNavigated()
+            }
+        })
+
+        val manager = GridLayoutManager(activity, 3)
         binding.sleepList.layoutManager = manager
 
         return binding.root
