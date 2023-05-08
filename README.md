@@ -1,7 +1,8 @@
-MarsRealEstateNetwork - Solution Code
-=====================================
+MarsRealEstateGrid - Solution Code
+==================================
 
-Solution code for Android Kotlin Fundamentals Codelab 8.1 Getting data from the internet
+Solution code for Android Kotlin Fundamentals Codelab 8.2 Loading and displaying 
+images from the internet.
 
 Introduction
 ------------
